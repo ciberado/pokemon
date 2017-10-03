@@ -6,7 +6,6 @@
 package com.capside.pokemondemo;
 
 import java.text.MessageFormat;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import lombok.SneakyThrows;
@@ -17,7 +16,6 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Scope;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
