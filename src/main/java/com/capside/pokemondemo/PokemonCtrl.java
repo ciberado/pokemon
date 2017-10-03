@@ -70,6 +70,22 @@ public class PokemonCtrl {
         }).start();
         return this.pokemon;
     }
+
+    @RequestMapping(value="/", params="stress")
+    @ResponseBody
+    void stress() {
+        for (int i=0; i < 4; i++) {
+            new Thread() {
+                public void run() {
+                    StringBuilder sb = new StringBuilder();
+                    while(true) {
+                        sb.append((char) Math.random()*255);
+                        if (sb.length() > 1000) sb.setLength(0);
+                    }
+                }
+            }.start();
+        }
+    }
     
     
 }
