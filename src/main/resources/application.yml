@@ -12,10 +12,9 @@ spring:
             hibernate:
                 dialect: org.hibernate.dialect.PostgreSQL94Dialect
     datasource:
-        url: jdbc:postgresql://localhost/fortunesdb
+        url: jdbc:postgresql://localhost/pokemondb
         username: postgres
         driverClassName: org.postgresql.Driver
-        data: classpath:/quotes.sql
         hikari:
             connection-timeout: 2000
             maximum-pool-size: 10
