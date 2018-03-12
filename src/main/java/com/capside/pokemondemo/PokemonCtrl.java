@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.capside.pokemondemo;
 
 import java.text.MessageFormat;
@@ -33,9 +28,9 @@ public class PokemonCtrl {
     private final Pokemon pokemon;
 
     @Autowired
-    public PokemonCtrl(ApplicationContext ctx, PokemonRepository repository) {
+    public PokemonCtrl(ApplicationContext ctx, PokemonService service) {
         this.ctx = (ConfigurableApplicationContext) ctx;
-        this.pokemon = repository.getRandomPokemon();
+        this.pokemon = service.getRandomPokemon();
     }
 
     @RequestMapping(value = "/", method = RequestMethod.GET, produces = {MediaType.TEXT_HTML_VALUE})
