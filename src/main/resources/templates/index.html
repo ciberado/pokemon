@@ -23,7 +23,7 @@
             
             .card {
                 display : block;
-                min-width: 420px;
+                min-width: 300px;
                 width : 40%;
                 background-color : white;
                 border : 1px solid silver;
@@ -33,7 +33,7 @@
             }
             
             .card > img {
-                min-width : 400px;
+                min-width : 250px;
             }
             
             .card h2 {
@@ -60,13 +60,11 @@
         </style>
     </head>
     <body>
-        <img id="capsidelogo" src="avatar-capside.png" alt="capside logo"/>
-        <img id="pokemonlogo" src="pokemon-logo.svg" alt="pokemon logo"/>
+        <img id="capsidelogo" src="images/avatar-capside.png" alt="capside logo"/>
+        <img id="pokemonlogo" src="images/pokemon-logo.svg" alt="pokemon logo"/>
         <div class="card">
-            <img th:src="${pokemon.url}" th:alt="${pokemon.name}"/> 
             <h2 th:text="${pokemon.name}">pokemon</h2>
-            <h4 th:text="${task}">task</h4>
-            <div id="arena"></div>
+            <img th:src="${pokemon.url}" th:alt="${pokemon.name}"/> 
         </div>
         <!--
         <div>
