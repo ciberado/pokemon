@@ -26,6 +26,6 @@ public class Pokemon implements Serializable {
     private String name;
     
     public String getUrl() {
-        return "images/" + id + ".jpg";
+        return "images/" + id + ".png";
     }
 }
