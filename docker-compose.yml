@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+    database_pokemon:
+        image: ciberado/mysql:latest
+        environment:
+            MYSQL_ROOT_PASSWORD: incorrecta
+        ports:
+            - "3306:3306"
+    pokemon:
+        depends_on:
+            - database_pokemon
+        image: ciberado/pokemon:0.0.5
+        ports:
+            - "8000:8080"
+        deploy:
+            restart_policy:
+                condition: any
+                delay: 10s
+                max_attempts: 10
+                window: 30s            
+        command: --spring.profiles.active=mysql --spring.datasource.url=jdbc:mysql://database_pokemon/pokemondb
+        
