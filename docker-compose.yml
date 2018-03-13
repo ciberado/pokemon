@@ -2,17 +2,17 @@ version: '3'
 
 services:
     database_pokemon:
-        image: ciberado/mysql:latest
+        image: ciberado/pokemondatabase:latest
         environment:
             MYSQL_ROOT_PASSWORD: incorrecta
-        ports:
-            - "3306:3306"
+        expose:
+            - "3306"
     pokemon:
         depends_on:
             - database_pokemon
         image: ciberado/pokemon:0.0.5
         ports:
-            - "8000:8080"
+            - "8080:8080"
         deploy:
             restart_policy:
                 condition: any
