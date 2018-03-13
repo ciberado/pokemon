@@ -20,7 +20,7 @@ spring:
 ---
 
 spring:
-    profiles: dev
+    profiles: mysql
     jpa:
         show-sql: true
     datasource:
