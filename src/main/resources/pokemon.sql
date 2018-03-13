@@ -5,7 +5,7 @@ species_id INT,
 height INT,
 weight INT,
 base_experience INT,
-order INT,
+order_num INT,
 is_default INT
 );
 
