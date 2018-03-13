@@ -2,6 +2,7 @@ package com.capside.pokemondemo;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.io.Serializable;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import lombok.AllArgsConstructor;
@@ -23,6 +24,11 @@ public class Pokemon implements Serializable {
     
     @Id
     private int id;
+    @Column(name="identifier")
     private String name;
-    private String url;
+    
+
+    public String getUrl() {
+        return id + ".png";
+    }
 }
