@@ -14,4 +14,4 @@ COPY --from=builder /app/target/*.jar /usr/share/app.jar
 
 EXPOSE 8080
 
-CMD ["java", "-jar", "/usr/share/app.jar"]
+ENTRYPOINT ["java", "-jar", "/usr/share/app.jar"]
