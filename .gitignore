@@ -5,4 +5,5 @@ nbactions.xml
 .project
 .classpath
 mvnw.cmd
+mvnw
 .vscode
